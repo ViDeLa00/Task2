@@ -1,0 +1,43 @@
+#Exercise 1
+list = [0, 1, 2, 3, 4, 5, 6, 0, 7, 0, 8, 0, 9, 0, 0, 0]
+for x in list:
+    if x == 0:
+        list.remove(x)
+        list.insert(len(list),0)
+for i in list:
+    print(i, end=" ")
+    
+#Exercise 2
+nl = int(input("How many lines will there be? "))
+vowels = 0
+consonants = 0
+tv = 0
+tc = 0
+for i in range(nl):
+    line = input("Please enter the line: ")
+    for l in line:
+        if (l == 'a' or l == 'e' or l == 'i' or l == 'o' or l == 'u'
+            or l == 'A' or l == 'E' or l == 'I' or l == 'O' or l == 'U'):
+            vowels = vowels + 1
+        else:
+            consonants = consonants + 1
+    print("Number of Vowels in line ", i, ": ", vowels)
+    print("Number of Consonants in line ", i, ": ", consonants)
+    tv = tv + vowels
+    tc = tc + consonants
+    vowels = 0
+    consonants = 0
+    
+print("Number of Vowels: ", tv)
+print("Number of Consonants: ", tc)
+
+#Exercise 3
+col = int(input())
+row = int(input())
+colN = int(input())
+rowN = int(input())
+
+if col == colN or row == rowN or abs(col - colN) == abs(row - rowN):
+  print ("YES")
+else:
+  print ("NO")
